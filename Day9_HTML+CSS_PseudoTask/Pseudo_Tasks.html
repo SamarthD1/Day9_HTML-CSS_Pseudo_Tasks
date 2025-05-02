@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day 9 Pseudo-class Tasks </title>
+
+        <style>
+            /* task 1 */
+            .hover-btn:hover {
+              background-color: lightgreen;
+            }
+
+            /* task 2 */
+            input:focus {
+                border: 2px solid royalblue;
+                outline: none;
+            }
+        
+            /* task 3 */
+            li:first-child {
+                color: red;
+            }
+
+            /* task 4 */
+            .emoji::before {
+                content: "🔹 ";
+            }
+
+            /* task 5 */
+            p::first-letter {
+                font-size: 200%;
+                color: darkorange;
+            }
+
+            /* task 6 */
+            .liclass::marker {
+                content: "➤ ";
+                color: purple;
+            }
+
+            /* task 7 */
+            .shine-btn {
+                position: relative;
+                padding: 12px 30px;
+                background: #3498db;
+                color: white;
+                border: none;
+                overflow: hidden;
+                font-size: 16px;
+            }
+
+            .shine-btn::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -75%;
+                width: 50%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.3);
+                transform: skewX(-20deg);
+            }
+
+            .shine-btn:hover::after {
+                animation: slide-shine 0.75s linear forwards;
+            }
+
+            @keyframes slide-shine {
+                to { left: 125%; }
+            }
+        </style>
+          
+    </head>
+    <body>
+        <h1 style="text-align: center;">Pseudo-class Tasks</h1>
+        <hr>
+        <h2>Task 1: Hover Effect</h2>
+        <button class="hover-btn">Hover Me</button>
+        <hr>
+        <h2> Task 2: Focus State Styling</h2>
+        <input type="text" placeholder="Focus me">
+        <hr>
+        <h2>Task 3: First-child Styling</h2>
+        <ul>
+            <li>First item</li>
+            <li>Second item</li>
+        </ul>
+        <hr>
+
+        <h1 style="text-align: center;"> Pseudo-element Tasks</h1>
+        <hr>
+        <h2> Task 4: Add Decorative Content</h2>
+        <h2 class="emoji">Introduction</h2>
+        <hr>
+        <h2>Task 5: First-letter Styling</h2>
+        <p>Learning CSS is fun and powerful.</p>
+        <hr>
+        <h2> Task 6: Custom List Markers</h2>
+        <ul>
+            <li class="liclass">HTML</li>
+            <li class="liclass">CSS</li>
+        </ul>
+        <hr>
+        <h2>Task 7: Animated Button with Shine Effect</h2>
+        <button class="shine-btn">Click Me</button>
+    </body>
+</html>
